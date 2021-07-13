@@ -1,0 +1,15 @@
+I have downloaded 50 bestseller books on Amazon. To explore the context, I have decided to download missing information from Goodreads database to see if there are other factors making these books popular. 
+
+As the first step I have downloaded Amazon Top 50 Bestselling Books 2009 - 2019 and imported the file using pandas. I got 550 rows categorized into fiction and non-fiction. 
+
+# Open .csv file using pandas under book
+books = pd.read_csv('/Users/vsturalova/Downloads/bestsellers with categories.csv', parse_dates=['Year'])
+Print(books.head())
+
+# Get the number of records and columns
+Print(books.shape)
+
+# Check missing values
+books.duplicated().sum()
+
+The data has no missing values so no further exploration is required  
